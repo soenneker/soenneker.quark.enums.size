@@ -16,7 +16,7 @@ public partial class Size
     public static readonly Size Default = new(""); 
 
     /// <summary>
-    /// Extra small size.
+    /// Extra small size. 
     /// Bootstrap's smallest size variant.
     /// </summary>
     public static readonly Size ExtraSmall = new("xs");
