@@ -13,7 +13,7 @@ public partial class Size
     /// Default size.
     /// Bootstrap's default size (no size modifier applied).
     /// </summary>
-    public static readonly Size Default = new("");
+    public static readonly Size Default = new(""); 
 
     /// <summary>
     /// Extra small size.
