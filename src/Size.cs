@@ -1,6 +1,6 @@
 ﻿using Intellenum;
 
-namespace Soenneker.Quark.Enums.Size;
+namespace Soenneker.Quark;
 
 /// <summary>
 /// An enumeration for Quark, representing Bootstrap element sizes.
