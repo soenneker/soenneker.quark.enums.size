@@ -7,7 +7,7 @@ namespace Soenneker.Quark.Enums;
 /// This enum contains the standard Bootstrap size values used throughout the framework.
 /// </summary>
 [Intellenum<string>]
-public partial class SizeTypeType
+public partial class SizeType
 {
     /// <summary>
     /// Default size.
