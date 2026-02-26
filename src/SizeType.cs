@@ -1,4 +1,4 @@
-using Intellenum;
+using Soenneker.Gen.EnumValues;
 
 namespace Soenneker.Quark.Enums;
 
@@ -6,7 +6,7 @@ namespace Soenneker.Quark.Enums;
 /// An enumeration for Quark, representing Bootstrap element sizes.
 /// This enum contains the standard Bootstrap size values used throughout the framework.
 /// </summary>
-[Intellenum<string>]
+[EnumValue<string>]
 public partial class SizeType
 {
     /// <summary>
