@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><Project Sdk="Microsoft.NET.Sdk">
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
@@ -8,20 +10,25 @@
         <NoWarn>$(NoWarn);1591</NoWarn>
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
-            <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
-            <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
-            <TestingPlatformShowTestsFailure>true</TestingPlatformShowTestsFailure>
+        <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+        <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
+        <TestingPlatformShowTestsFailure>true</TestingPlatformShowTestsFailure>
 
     </PropertyGroup>
 
-    <ItemGroup><PackageReference Include="Soenneker.Tests.Unit" Version="4.0.1084" />
+    <ItemGroup>
+        <PackageReference Include="Soenneker.Tests.Unit" Version="4.0.1084" />
         <PackageReference Include="xUnit.v3" Version="3.2.2" />
-</ItemGroup>
+    </ItemGroup>
 
     <ItemGroup>
         <Content Include="testconfig.json">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Soenneker.Quark.Enums.Size\Soenneker.Quark.Enums.Size.csproj" />
     </ItemGroup>
 
 </Project>
