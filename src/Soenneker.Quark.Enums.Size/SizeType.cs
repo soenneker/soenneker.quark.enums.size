@@ -1,53 +1,52 @@
 using Soenneker.Gen.EnumValues;
 
-namespace Soenneker.Quark.Enums;
+namespace Soenneker.Quark;
 
 /// <summary>
-/// An enumeration for Quark, representing Bootstrap element sizes.
-/// This enum contains the standard Bootstrap size values used throughout the framework.
+/// Semantic size tokens for Quark that align with Tailwind-style size scales.
 /// </summary>
 [EnumValue<string>]
 public partial class SizeType
 {
     /// <summary>
     /// Default size.
-    /// Bootstrap's default size (no size modifier applied).
+    /// Default semantic size token.
     /// </summary>
     public static readonly SizeType Default = new(""); 
 
     /// <summary>
     /// Extra small size. 
-    /// Bootstrap's smallest size variant.
+    /// Extra small semantic size token.
     /// </summary>
     public static readonly SizeType ExtraSmall = new("xs");
 
     /// <summary>
     /// Small size.
-    /// Bootstrap's small size variant.
+    /// Small semantic size token.
     /// </summary>
     public static readonly SizeType Small = new("sm");
 
     /// <summary>
     /// Medium size.
-    /// Bootstrap's medium size variant.
+    /// Medium semantic size token.
     /// </summary>
     public static readonly SizeType Medium = new("md");
 
     /// <summary>
     /// Large size.
-    /// Bootstrap's large size variant.
+    /// Large semantic size token.
     /// </summary>
     public static readonly SizeType Large = new("lg");
 
     /// <summary>
     /// Extra large size.
-    /// Bootstrap's largest size variant.
+    /// Extra large semantic size token.
     /// </summary>
     public static readonly SizeType ExtraLarge = new("xl");
 
     /// <summary>
     /// Extra extra large size.
-    /// Bootstrap's extra large size variant for larger screens.
+    /// 2xl semantic size token.
     /// </summary>
-    public static readonly SizeType ExtraExtraLarge = new("xxl");
+    public static readonly SizeType ExtraExtraLarge = new("2xl");
 }
