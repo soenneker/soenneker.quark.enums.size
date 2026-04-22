@@ -15,12 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="testconfig.json">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
-
-    <ItemGroup>
         <ProjectReference Include="..\..\src\Soenneker.Quark.Enums.Size\Soenneker.Quark.Enums.Size.csproj" />
     </ItemGroup>
 </Project>
+
