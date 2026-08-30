@@ -3,50 +3,43 @@ using Soenneker.Gen.EnumValues;
 namespace Soenneker.Quark;
 
 /// <summary>
-/// Semantic size tokens for Quark that align with Tailwind-style size scales.
+/// Represents a semantic component-size token used by Quark APIs.
 /// </summary>
 [EnumValue<string>]
 public partial class SizeType
 {
     /// <summary>
-    /// Default size.
-    /// Default semantic size token.
+    /// The default size, represented by an empty suffix.
     /// </summary>
-    public static readonly SizeType Default = new(""); 
+    public static readonly SizeType Default = new("");
 
     /// <summary>
-    /// Extra small size. 
-    /// Extra small semantic size token.
+    /// The extra-small (<c>xs</c>) size.
     /// </summary>
     public static readonly SizeType ExtraSmall = new("xs");
 
     /// <summary>
-    /// Small size.
-    /// Small semantic size token.
+    /// The small (<c>sm</c>) size.
     /// </summary>
     public static readonly SizeType Small = new("sm");
 
     /// <summary>
-    /// Medium size.
-    /// Medium semantic size token.
+    /// The medium (<c>md</c>) size.
     /// </summary>
     public static readonly SizeType Medium = new("md");
 
     /// <summary>
-    /// Large size.
-    /// Large semantic size token.
+    /// The large (<c>lg</c>) size.
     /// </summary>
     public static readonly SizeType Large = new("lg");
 
     /// <summary>
-    /// Extra large size.
-    /// Extra large semantic size token.
+    /// The extra-large (<c>xl</c>) size.
     /// </summary>
     public static readonly SizeType ExtraLarge = new("xl");
 
     /// <summary>
-    /// Extra extra large size.
-    /// 2xl semantic size token.
+    /// The extra-extra-large (<c>2xl</c>) size.
     /// </summary>
     public static readonly SizeType ExtraExtraLarge = new("2xl");
 }

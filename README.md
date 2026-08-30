@@ -1,11 +1,12 @@
 [![](https://img.shields.io/nuget/v/soenneker.quark.enums.size.svg?style=for-the-badge)](https://www.nuget.org/packages/soenneker.quark.enums.size/)
 [![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.quark.enums.size/publish-package.yml?style=for-the-badge)](https://github.com/soenneker/soenneker.quark.enums.size/actions/workflows/publish-package.yml)
+[![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.quark.enums.size/build-and-test.yml?label=Build&style=for-the-badge)](https://github.com/soenneker/soenneker.quark.enums.size/actions/workflows/build-and-test.yml)
 [![](https://img.shields.io/nuget/dt/soenneker.quark.enums.size.svg?style=for-the-badge)](https://www.nuget.org/packages/soenneker.quark.enums.size/)
 [![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.quark.enums.size/codeql.yml?label=CodeQL&style=for-the-badge)](https://github.com/soenneker/soenneker.quark.enums.size/actions/workflows/codeql.yml)
 
 # Soenneker.Quark.Enums.Size
 
-Semantic size tokens for Quark that align with Tailwind-style size scales.
+Semantic component-size tokens shared by Quark APIs.
 
 ## Install
 
@@ -13,18 +14,29 @@ Semantic size tokens for Quark that align with Tailwind-style size scales.
 dotnet add package Soenneker.Quark.Enums.Size
 ```
 
-## What you get
+## Usage
 
-- `SizeType` — Semantic size tokens for Quark that align with Tailwind-style size scales.
+```csharp
+SizeType size = SizeType.Large;
+string suffix = size.Value; // "lg"
+```
 
-## API at a glance
+The values are size identifiers rather than CSS lengths. Components decide how each identifier maps to padding, typography, dimensions, or generated class names.
 
-| API | What it does | Result / important behavior |
-| --- | --- | --- |
-| `SizeType.Default` | Default size. Default semantic size token. | Default size. Default semantic size token. |
-| `SizeType.ExtraSmall` | Extra small size. Extra small semantic size token. | Extra small size. Extra small semantic size token. |
-| `SizeType.Small` | Small size. Small semantic size token. | Small size. Small semantic size token. |
-| `SizeType.Medium` | Medium size. Medium semantic size token. | Medium size. Medium semantic size token. |
-| `SizeType.Large` | Large size. Large semantic size token. | Large size. Large semantic size token. |
-| `SizeType.ExtraLarge` | Extra large size. Extra large semantic size token. | Extra large size. Extra large semantic size token. |
-| `SizeType.ExtraExtraLarge` | Extra extra large size. 2xl semantic size token. | Extra extra large size. 2xl semantic size token. |
+`Default.Value` is an empty string, which lets class composition omit a size suffix:
+
+```csharp
+string modifier = SizeType.Default.Value; // ""
+```
+
+## Values
+
+| Member | Value |
+| --- | --- |
+| `Default` | empty string |
+| `ExtraSmall` | `xs` |
+| `Small` | `sm` |
+| `Medium` | `md` |
+| `Large` | `lg` |
+| `ExtraLarge` | `xl` |
+| `ExtraExtraLarge` | `2xl` |
